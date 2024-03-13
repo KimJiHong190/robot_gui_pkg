@@ -11,23 +11,23 @@ class SetupWindow(QWidget):
         layout = QVBoxLayout(self)
 
         # Page Title
-        title = QLabel("Setup Page")
+        title = QLabel("Page1")
         title.setFont(QFont("Arial", 12, QFont.Bold))
         layout.addWidget(title)
 
         # Page Content
         page_content = QHBoxLayout()
 
-        # Left vertical of Setup Page
+        # Left vertical of Page1, not used in this code
         left_layout = QVBoxLayout()
         
-        # Right vertical of Setup Page
+        # Right vertical of Page1
         right_layout = QGridLayout()
-        motor_speed_acc = self.create_motor_speed_acc_group()
-        initial_pose = self.create_initial_pose_group()
-        right_layout.addWidget(motor_speed_acc, 0, 0)
-        right_layout.addWidget(self.create_sensor_fiter_group(), 1, 0)
-        right_layout.addWidget(initial_pose, 2, 0)
+        page1_setting1 = self.create_page1_setting1_group()
+        page1_setting3 = self.create_setting3_group()
+        right_layout.addWidget(page1_setting1, 0, 0)
+        right_layout.addWidget(self.create_setting2_group(), 1, 0)
+        right_layout.addWidget(page1_setting3, 2, 0)
 
         page_content.addLayout(left_layout)
         page_content.addLayout(right_layout)
@@ -58,15 +58,15 @@ class SetupWindow(QWidget):
         return button
 
 
-    def create_motor_speed_acc_group(self):
-        group = QGroupBox("Motor speed & acc setting")
+    def create_page1_setting1_group(self):
+        group = QGroupBox("Setting 1")
         layout = QHBoxLayout()
-        anchor_group = self.create_speed_acc_subgroup("Anchor")
-        ascender_group = self.create_speed_acc_subgroup("Ascender")
-        joint_group = self.create_speed_acc_subgroup("Joint")
-        layout.addWidget(anchor_group)
-        layout.addWidget(ascender_group)
-        layout.addWidget(joint_group)
+        robot1_group = self.create_speed_acc_subgroup("Robot1")
+        robot2_group = self.create_speed_acc_subgroup("Robot2")
+        robot3_group = self.create_speed_acc_subgroup("Robot3")
+        layout.addWidget(robot1_group)
+        layout.addWidget(robot2_group)
+        layout.addWidget(robot3_group)
         group.setLayout(layout)
         return group
     
@@ -91,30 +91,29 @@ class SetupWindow(QWidget):
         group.setLayout(layout)
         return group
     
-    def create_sensor_fiter_group(self):
-        group = QGroupBox("Sensor filter")
+    def create_setting2_group(self):
+        group = QGroupBox("Setting 2")
         layout = QHBoxLayout()
-        self.motor_read_current_filter_LPF_group = QGroupBox("LPF")
-        self.motor_read_current_filter_LPF_layout = QVBoxLayout()
-        self.motor_read_current_filter_LPF_edit = QLineEdit()
-        self.motor_read_current_filter_LPF_set_button = QPushButton("Set")
-        self.motor_read_current_filter_LPF_layout.addWidget(self.motor_read_current_filter_LPF_edit)
-        self.motor_read_current_filter_LPF_layout.addWidget(self.motor_read_current_filter_LPF_set_button)
-        self.motor_read_current_filter_LPF_group.setLayout(self.motor_read_current_filter_LPF_layout)
+        self.page1_setting2_group = QGroupBox("LPF")
+        self.page1_setting2_layout = QVBoxLayout()
+        self.page1_setting2_edit = QLineEdit()
+        self.page1_setting2_set_btn = QPushButton("Set")
+        self.page1_setting2_layout.addWidget(self.page1_setting2_edit)
+        self.page1_setting2_layout.addWidget(self.page1_setting2_set_btn)
+        self.page1_setting2_group.setLayout(self.page1_setting2_layout)
 
-        layout.addWidget(self.motor_read_current_filter_LPF_group)
+        layout.addWidget(self.page1_setting2_group)
         group.setLayout(layout)
         return group
     
 
-    def create_initial_pose_group(self):
-        group = QGroupBox("Initial Pose")
+    def create_setting3_group(self):
+        group = QGroupBox("Setting 3")
         layout = QGridLayout()
         
-        
-        # Wheelleg Offset (duplicated from the setup_ui.py)
-        wheelleg_offset_group = QGroupBox("Wheelleg Joint")
-        wheelleg_offset_layout = QVBoxLayout()
+        # Robot Offset
+        robot_offset_group = QGroupBox("Joint Setting")
+        robot_offset_layout = QVBoxLayout()
         leg_layout = QGridLayout()
         for leg, label in enumerate(['FL', 'FR', 'RL', 'RR']):
             leg_frame = QFrame()
@@ -129,12 +128,12 @@ class SetupWindow(QWidget):
     
             leg_layout.addWidget(leg_frame, leg // 2, leg % 2)
             
-        wheelleg_offset_layout.addLayout(leg_layout)
-        self.offset_button = QPushButton("Set")
-        wheelleg_offset_layout.addWidget(self.offset_button, alignment=Qt.AlignCenter)
-        wheelleg_offset_group.setLayout(wheelleg_offset_layout)
+        robot_offset_layout.addLayout(leg_layout)
+        self.page1_setting3_set_btn = QPushButton("Set")
+        robot_offset_layout.addWidget(self.page1_setting3_set_btn, alignment=Qt.AlignCenter)
+        robot_offset_group.setLayout(robot_offset_layout)
         
-        layout.addWidget(wheelleg_offset_group)
+        layout.addWidget(robot_offset_group)
         group.setLayout(layout)
         return group
 
@@ -163,12 +162,12 @@ class ManualWindow(QWidget):
         # Left vertical of Manual Page
         left_layout = QVBoxLayout()
         anchor_group = self.create_anchor_group()
-        ascender_group = self.create_ascender_group()
+        robot2_group = self.create_robot2_group()
         activation_setting_group = self.create_activation_setting_group()
         anchor_motor_group = self.create_anchor_motor_group()
 
         page_content.addWidget(anchor_group)
-        page_content.addWidget(ascender_group)
+        page_content.addWidget(robot2_group)
         page_content.addWidget(activation_setting_group)
         page_content.addWidget(anchor_motor_group)
 
@@ -230,129 +229,129 @@ class ManualWindow(QWidget):
         return layout
 
     def create_anchor_group(self):
-        group = QGroupBox("Anchor")
+        group = QGroupBox("Robot1")
         layout = QVBoxLayout()
 
-        anchor1_position_group = QGroupBox("Anchor1 Position")
-        anchor1_position_main_layout = QVBoxLayout()
+        robot1_position_group = QGroupBox("Robot1 Position")
+        robot1_position_main_layout = QVBoxLayout()
         
-        anchor1_position_arrows_layout = QHBoxLayout()
-        self.anchor1_position_left_arrow = self.create_toggle_button_false("<")
-        self.anchor1_position_right_arrow = self.create_toggle_button_false(">")
-        anchor1_position_arrows_layout.addWidget(self.anchor1_position_left_arrow)
-        anchor1_position_arrows_layout.addWidget(self.anchor1_position_right_arrow)
+        robot1_position_arrows_layout = QHBoxLayout()
+        self.robot1_position_left_arrow = self.create_toggle_button_false("<")
+        self.robot1_position_right_arrow = self.create_toggle_button_false(">")
+        robot1_position_arrows_layout.addWidget(self.robot1_position_left_arrow)
+        robot1_position_arrows_layout.addWidget(self.robot1_position_right_arrow)
 
-        anchor1_position_vertical_layout = QVBoxLayout()
-        self.anchor1_position_float_box = QLineEdit()
-        self.anchor1_position_float_set = QPushButton("Set")
-        anchor1_position_vertical_layout.addWidget(self.anchor1_position_float_box)
-        anchor1_position_vertical_layout.addWidget(self.anchor1_position_float_set)
+        robot1_position_vertical_layout = QVBoxLayout()
+        self.robot1_position_float_box = QLineEdit()
+        self.robot1_position_float_set = QPushButton("Set")
+        robot1_position_vertical_layout.addWidget(self.robot1_position_float_box)
+        robot1_position_vertical_layout.addWidget(self.robot1_position_float_set)
         
 
-        anchor1_position_main_layout.addLayout(anchor1_position_arrows_layout)
-        anchor1_position_main_layout.addLayout(anchor1_position_vertical_layout)
-        anchor1_position_group.setLayout(anchor1_position_main_layout)
-        layout.addWidget(anchor1_position_group)
+        robot1_position_main_layout.addLayout(robot1_position_arrows_layout)
+        robot1_position_main_layout.addLayout(robot1_position_vertical_layout)
+        robot1_position_group.setLayout(robot1_position_main_layout)
+        layout.addWidget(robot1_position_group)
 
 
-        anchor1_fix_group = QGroupBox("Anchor1 Fix")
-        anchor1_fix_layout = QVBoxLayout()
-        anchor1_fix_btn_layout = QHBoxLayout()
-        self.anchor1_fix1_btn = self.create_toggle_button_false("Fix1 Unfixed")
-        self.anchor1_fix2_btn = self.create_toggle_button_false("Fix2 Unfixed")
-        anchor1_fix_btn_layout.addWidget(self.anchor1_fix1_btn)
-        anchor1_fix_btn_layout.addWidget(self.anchor1_fix2_btn)
+        robot1_fix_group = QGroupBox("robot1 Fix")
+        robot1_fix_layout = QVBoxLayout()
+        robot1_fix_btn_layout = QHBoxLayout()
+        self.robot1_fix1_btn = self.create_toggle_button_false("Fix1 Unfixed")
+        self.robot1_fix2_btn = self.create_toggle_button_false("Fix2 Unfixed")
+        robot1_fix_btn_layout.addWidget(self.robot1_fix1_btn)
+        robot1_fix_btn_layout.addWidget(self.robot1_fix2_btn)
         
-        anchor1_fix_arrows_layout = QGridLayout()
+        robot1_fix_arrows_layout = QGridLayout()
         
-        self.anchor1_fix1_up_arrow = self.create_toggle_button_false("^")
+        self.robot1_fix1_up_arrow = self.create_toggle_button_false("^")
 
-        self.anchor1_fix1_down_arrow = self.create_toggle_button_false("v")
+        self.robot1_fix1_down_arrow = self.create_toggle_button_false("v")
 
-        self.anchor1_fix2_up_arrow = self.create_toggle_button_false("^")
+        self.robot1_fix2_up_arrow = self.create_toggle_button_false("^")
 
-        self.anchor1_fix2_down_arrow = self.create_toggle_button_false("v")
+        self.robot1_fix2_down_arrow = self.create_toggle_button_false("v")
 
-        self.anchor1_fix1_edit = QLineEdit()
-        self.anchor1_fix1_set_btn = QPushButton("Set")
-        self.anchor1_fix2_edit = QLineEdit()
-        self.anchor1_fix2_set_btn = QPushButton("Set")
+        self.robot1_fix1_edit = QLineEdit()
+        self.robot1_fix1_set_btn = QPushButton("Set")
+        self.robot1_fix2_edit = QLineEdit()
+        self.robot1_fix2_set_btn = QPushButton("Set")
 
-        anchor1_fix_arrows_layout.addWidget(self.anchor1_fix1_up_arrow, 0, 0)
-        anchor1_fix_arrows_layout.addWidget(self.anchor1_fix1_down_arrow, 1, 0)
-        anchor1_fix_arrows_layout.addWidget(self.anchor1_fix1_edit, 2, 0)
-        anchor1_fix_arrows_layout.addWidget(self.anchor1_fix1_set_btn, 3, 0)
+        robot1_fix_arrows_layout.addWidget(self.robot1_fix1_up_arrow, 0, 0)
+        robot1_fix_arrows_layout.addWidget(self.robot1_fix1_down_arrow, 1, 0)
+        robot1_fix_arrows_layout.addWidget(self.robot1_fix1_edit, 2, 0)
+        robot1_fix_arrows_layout.addWidget(self.robot1_fix1_set_btn, 3, 0)
         
-        anchor1_fix_arrows_layout.addWidget(self.anchor1_fix2_up_arrow, 0, 2)
-        anchor1_fix_arrows_layout.addWidget(self.anchor1_fix2_down_arrow, 1, 2)
-        anchor1_fix_arrows_layout.addWidget(self.anchor1_fix2_edit, 2, 2)
-        anchor1_fix_arrows_layout.addWidget(self.anchor1_fix2_set_btn, 3, 2)
+        robot1_fix_arrows_layout.addWidget(self.robot1_fix2_up_arrow, 0, 2)
+        robot1_fix_arrows_layout.addWidget(self.robot1_fix2_down_arrow, 1, 2)
+        robot1_fix_arrows_layout.addWidget(self.robot1_fix2_edit, 2, 2)
+        robot1_fix_arrows_layout.addWidget(self.robot1_fix2_set_btn, 3, 2)
 
-        anchor1_fix_layout.addLayout(anchor1_fix_btn_layout)
-        anchor1_fix_layout.addLayout(anchor1_fix_arrows_layout)
-        anchor1_fix_group.setLayout(anchor1_fix_layout)
-        layout.addWidget(anchor1_fix_group)
+        robot1_fix_layout.addLayout(robot1_fix_btn_layout)
+        robot1_fix_layout.addLayout(robot1_fix_arrows_layout)
+        robot1_fix_group.setLayout(robot1_fix_layout)
+        layout.addWidget(robot1_fix_group)
 
         ###
         
-        anchor2_position_group = QGroupBox("Anchor2 Position")
-        anchor2_position_main_layout = QVBoxLayout()
+        robot4_position_group = QGroupBox("Robot4 Position")
+        robot4_position_main_layout = QVBoxLayout()
         
-        anchor2_position_arrows_layout = QHBoxLayout()
-        self.anchor2_position_left_arrow = self.create_toggle_button_false("<")
-        self.anchor2_position_right_arrow = self.create_toggle_button_false(">")
-        anchor2_position_arrows_layout.addWidget(self.anchor2_position_left_arrow)
-        anchor2_position_arrows_layout.addWidget(self.anchor2_position_right_arrow)
+        robot4_position_arrows_layout = QHBoxLayout()
+        self.robot4_position_left_arrow = self.create_toggle_button_false("<")
+        self.robot4_position_right_arrow = self.create_toggle_button_false(">")
+        robot4_position_arrows_layout.addWidget(self.robot4_position_left_arrow)
+        robot4_position_arrows_layout.addWidget(self.robot4_position_right_arrow)
         
-        anchor2_position_vertical_layout = QVBoxLayout()
-        self.anchor2_position_float_box = QLineEdit()
-        self.anchor2_position_float_set = QPushButton("Set")
-        anchor2_position_vertical_layout.addWidget(self.anchor2_position_float_box)
-        anchor2_position_vertical_layout.addWidget(self.anchor2_position_float_set)
+        robot4_position_vertical_layout = QVBoxLayout()
+        self.robot4_position_float_box = QLineEdit()
+        self.robot4_position_float_set = QPushButton("Set")
+        robot4_position_vertical_layout.addWidget(self.robot4_position_float_box)
+        robot4_position_vertical_layout.addWidget(self.robot4_position_float_set)
         
-        anchor2_position_main_layout.addLayout(anchor2_position_arrows_layout)
-        anchor2_position_main_layout.addLayout(anchor2_position_vertical_layout)
-        anchor2_position_group.setLayout(anchor2_position_main_layout)
-        layout.addWidget(anchor2_position_group)
+        robot4_position_main_layout.addLayout(robot4_position_arrows_layout)
+        robot4_position_main_layout.addLayout(robot4_position_vertical_layout)
+        robot4_position_group.setLayout(robot4_position_main_layout)
+        layout.addWidget(robot4_position_group)
 
 
-        anchor2_fix_group = QGroupBox("Anchor2 Fix")
-        anchor2_fix_layout = QVBoxLayout()
-        anchor2_fix_btn_layout = QHBoxLayout()
-        self.anchor2_fix1_btn = self.create_toggle_button_false("Fix1 Unfixed")
-        self.anchor2_fix2_btn = self.create_toggle_button_false("Fix2 Unfixed")
-        anchor2_fix_btn_layout.addWidget(self.anchor2_fix1_btn)
-        anchor2_fix_btn_layout.addWidget(self.anchor2_fix2_btn)
+        robot4_fix_group = QGroupBox("robot4 Fix")
+        robot4_fix_layout = QVBoxLayout()
+        robot4_fix_btn_layout = QHBoxLayout()
+        self.robot4_fix1_btn = self.create_toggle_button_false("Fix1 Unfixed")
+        self.robot4_fix2_btn = self.create_toggle_button_false("Fix2 Unfixed")
+        robot4_fix_btn_layout.addWidget(self.robot4_fix1_btn)
+        robot4_fix_btn_layout.addWidget(self.robot4_fix2_btn)
         
-        anchor2_fix_arrows_layout = QGridLayout()
+        robot4_fix_arrows_layout = QGridLayout()
         
-        self.anchor2_fix1_up_arrow = self.create_toggle_button_false("^")
+        self.robot4_fix1_up_arrow = self.create_toggle_button_false("^")
         
-        self.anchor2_fix1_down_arrow = self.create_toggle_button_false("v")
+        self.robot4_fix1_down_arrow = self.create_toggle_button_false("v")
         
-        self.anchor2_fix2_up_arrow = self.create_toggle_button_false("^")
+        self.robot4_fix2_up_arrow = self.create_toggle_button_false("^")
         
-        self.anchor2_fix2_down_arrow = self.create_toggle_button_false("v")
+        self.robot4_fix2_down_arrow = self.create_toggle_button_false("v")
         
-        self.anchor2_fix1_edit = QLineEdit()
-        self.anchor2_fix1_set_btn = QPushButton("Set")
-        self.anchor2_fix2_edit = QLineEdit()
-        self.anchor2_fix2_set_btn = QPushButton("Set")        
+        self.robot4_fix1_edit = QLineEdit()
+        self.robot4_fix1_set_btn = QPushButton("Set")
+        self.robot4_fix2_edit = QLineEdit()
+        self.robot4_fix2_set_btn = QPushButton("Set")        
         
-        anchor2_fix_arrows_layout.addWidget(self.anchor2_fix1_up_arrow, 0, 0)
-        anchor2_fix_arrows_layout.addWidget(self.anchor2_fix1_down_arrow, 1, 0)
-        anchor2_fix_arrows_layout.addWidget(self.anchor2_fix1_edit, 2, 0)
-        anchor2_fix_arrows_layout.addWidget(self.anchor2_fix1_set_btn, 3, 0)
+        robot4_fix_arrows_layout.addWidget(self.robot4_fix1_up_arrow, 0, 0)
+        robot4_fix_arrows_layout.addWidget(self.robot4_fix1_down_arrow, 1, 0)
+        robot4_fix_arrows_layout.addWidget(self.robot4_fix1_edit, 2, 0)
+        robot4_fix_arrows_layout.addWidget(self.robot4_fix1_set_btn, 3, 0)
         
-        anchor2_fix_arrows_layout.addWidget(self.anchor2_fix2_up_arrow, 0, 2)
-        anchor2_fix_arrows_layout.addWidget(self.anchor2_fix2_down_arrow, 1, 2)
-        anchor2_fix_arrows_layout.addWidget(self.anchor2_fix2_edit, 2, 2)
-        anchor2_fix_arrows_layout.addWidget(self.anchor2_fix2_set_btn, 3, 2)
+        robot4_fix_arrows_layout.addWidget(self.robot4_fix2_up_arrow, 0, 2)
+        robot4_fix_arrows_layout.addWidget(self.robot4_fix2_down_arrow, 1, 2)
+        robot4_fix_arrows_layout.addWidget(self.robot4_fix2_edit, 2, 2)
+        robot4_fix_arrows_layout.addWidget(self.robot4_fix2_set_btn, 3, 2)
 
-        anchor2_fix_layout.addLayout(anchor2_fix_btn_layout)
-        anchor2_fix_layout.addLayout(anchor2_fix_arrows_layout)
-        anchor2_fix_group.setLayout(anchor2_fix_layout)
-        layout.addWidget(anchor2_fix_group)
+        robot4_fix_layout.addLayout(robot4_fix_btn_layout)
+        robot4_fix_layout.addLayout(robot4_fix_arrows_layout)
+        robot4_fix_group.setLayout(robot4_fix_layout)
+        layout.addWidget(robot4_fix_group)
 
         group.setLayout(layout)
         return group
@@ -367,139 +366,139 @@ class ManualWindow(QWidget):
 
 
 
-    def create_ascender_group(self):
-        group = QGroupBox("Ascender")
+    def create_robot2_group(self):
+        group = QGroupBox("Robot2")
         layout = QVBoxLayout()
 
     
-        each_motor_group = QGroupBox("Ascender each motor")
+        each_motor_group = QGroupBox("Robot2 each motor")
         each_motor_layout = QHBoxLayout()
     
         left_each_motor_group = QGroupBox("Left")
         left_each_motor_layout = QVBoxLayout()
-        self.ascender_left_motor_up_arrow = self.create_toggle_button_false("^")
-        #self.ascender_left_motor_up_arrow.setCheckable(True)
-        #self.ascender_left_motor_up_arrow.setChecked(True)
-        self.ascender_left_motor_up_arrow.setStyleSheet("background-color: red")
-        self.ascender_left_motor_up_arrow.clicked.connect(self.toggle_button_color)
+        self.robot2_left_motor_up_arrow = self.create_toggle_button_false("^")
+        #self.robot2_left_motor_up_arrow.setCheckable(True)
+        #self.robot2_left_motor_up_arrow.setChecked(True)
+        self.robot2_left_motor_up_arrow.setStyleSheet("background-color: red")
+        self.robot2_left_motor_up_arrow.clicked.connect(self.toggle_button_color)
         
-        self.ascender_left_motor_down_arrow = self.create_toggle_button_false("v")
-        self.ascender_left_motor_down_arrow.setStyleSheet("background-color: red")
-        self.ascender_left_motor_down_arrow.clicked.connect(self.toggle_button_color)
+        self.robot2_left_motor_down_arrow = self.create_toggle_button_false("v")
+        self.robot2_left_motor_down_arrow.setStyleSheet("background-color: red")
+        self.robot2_left_motor_down_arrow.clicked.connect(self.toggle_button_color)
         
-        left_each_motor_layout.addWidget(self.ascender_left_motor_up_arrow)
-        left_each_motor_layout.addWidget(self.ascender_left_motor_down_arrow)
+        left_each_motor_layout.addWidget(self.robot2_left_motor_up_arrow)
+        left_each_motor_layout.addWidget(self.robot2_left_motor_down_arrow)
         left_each_motor_group.setLayout(left_each_motor_layout)
         each_motor_layout.addWidget(left_each_motor_group)
     
         right_each_motor_group = QGroupBox("Right")
         right_each_motor_layout = QVBoxLayout()
-        self.ascender_right_motor_up_arrow = self.create_toggle_button_false("^")
+        self.robot2_right_motor_up_arrow = self.create_toggle_button_false("^")
 
-        self.ascender_right_motor_up_arrow.setStyleSheet("background-color: red")
-        self.ascender_right_motor_up_arrow.clicked.connect(self.toggle_button_color)
+        self.robot2_right_motor_up_arrow.setStyleSheet("background-color: red")
+        self.robot2_right_motor_up_arrow.clicked.connect(self.toggle_button_color)
         
-        self.ascender_right_motor_down_arrow = self.create_toggle_button_false("v")
+        self.robot2_right_motor_down_arrow = self.create_toggle_button_false("v")
 
-        self.ascender_right_motor_down_arrow.setStyleSheet("background-color: red")
-        self.ascender_right_motor_down_arrow.clicked.connect(self.toggle_button_color)        
+        self.robot2_right_motor_down_arrow.setStyleSheet("background-color: red")
+        self.robot2_right_motor_down_arrow.clicked.connect(self.toggle_button_color)        
         
-        right_each_motor_layout.addWidget(self.ascender_right_motor_up_arrow)
-        right_each_motor_layout.addWidget(self.ascender_right_motor_down_arrow)
+        right_each_motor_layout.addWidget(self.robot2_right_motor_up_arrow)
+        right_each_motor_layout.addWidget(self.robot2_right_motor_down_arrow)
         right_each_motor_group.setLayout(right_each_motor_layout)
         each_motor_layout.addWidget(right_each_motor_group)
 
         both_each_motor_group = QGroupBox("Both")
         both_each_motor_layout = QVBoxLayout()
-        self.ascender_both_motor_up_arrow = self.create_toggle_button_false("^")
+        self.robot2_both_motor_up_arrow = self.create_toggle_button_false("^")
 
-        self.ascender_both_motor_up_arrow.setStyleSheet("background-color: red")
-        self.ascender_both_motor_up_arrow.clicked.connect(self.toggle_button_color)
+        self.robot2_both_motor_up_arrow.setStyleSheet("background-color: red")
+        self.robot2_both_motor_up_arrow.clicked.connect(self.toggle_button_color)
         
-        self.ascender_both_motor_down_arrow = self.create_toggle_button_false("v")
+        self.robot2_both_motor_down_arrow = self.create_toggle_button_false("v")
 
-        self.ascender_both_motor_down_arrow.setStyleSheet("background-color: red")
-        self.ascender_both_motor_down_arrow.clicked.connect(self.toggle_button_color)        
+        self.robot2_both_motor_down_arrow.setStyleSheet("background-color: red")
+        self.robot2_both_motor_down_arrow.clicked.connect(self.toggle_button_color)        
         
-        both_each_motor_layout.addWidget(self.ascender_both_motor_up_arrow)
-        both_each_motor_layout.addWidget(self.ascender_both_motor_down_arrow)
+        both_each_motor_layout.addWidget(self.robot2_both_motor_up_arrow)
+        both_each_motor_layout.addWidget(self.robot2_both_motor_down_arrow)
         both_each_motor_group.setLayout(both_each_motor_layout)
         each_motor_layout.addWidget(both_each_motor_group)
 
         each_motor_group.setLayout(each_motor_layout)
 
-        remote_controller_group = QGroupBox("Ascender remote controller")
+        remote_controller_group = QGroupBox("robot2 remote controller")
         remote_layout = QGridLayout()
-        self.ascender_remote_up_arrow = self.create_toggle_button_false("^")
+        self.robot2_remote_up_arrow = self.create_toggle_button_false("^")
 
-        self.ascender_remote_up_arrow.setStyleSheet("background-color: red")
-        self.ascender_remote_up_arrow.clicked.connect(self.toggle_button_color)
+        self.robot2_remote_up_arrow.setStyleSheet("background-color: red")
+        self.robot2_remote_up_arrow.clicked.connect(self.toggle_button_color)
         
-        self.ascender_remote_left_arrow = self.create_toggle_button_false("<")
+        self.robot2_remote_left_arrow = self.create_toggle_button_false("<")
 
-        self.ascender_remote_left_arrow.setStyleSheet("background-color: red")
-        self.ascender_remote_left_arrow.clicked.connect(self.toggle_button_color)
+        self.robot2_remote_left_arrow.setStyleSheet("background-color: red")
+        self.robot2_remote_left_arrow.clicked.connect(self.toggle_button_color)
         
-        self.ascender_remote_right_arrow = self.create_toggle_button_false(">")
+        self.robot2_remote_right_arrow = self.create_toggle_button_false(">")
 
-        self.ascender_remote_right_arrow.setStyleSheet("background-color: red")
-        self.ascender_remote_right_arrow.clicked.connect(self.toggle_button_color)
+        self.robot2_remote_right_arrow.setStyleSheet("background-color: red")
+        self.robot2_remote_right_arrow.clicked.connect(self.toggle_button_color)
         
-        self.ascender_remote_down_arrow = self.create_toggle_button_false("v")
+        self.robot2_remote_down_arrow = self.create_toggle_button_false("v")
 
-        self.ascender_remote_down_arrow.setStyleSheet("background-color: red")
-        self.ascender_remote_down_arrow.clicked.connect(self.toggle_button_color)
+        self.robot2_remote_down_arrow.setStyleSheet("background-color: red")
+        self.robot2_remote_down_arrow.clicked.connect(self.toggle_button_color)
 
         # Diagonal move
-        self.ascender_remote_up_left_arrow = self.create_toggle_button_false("<^")
-        self.ascender_remote_up_left_arrow.setStyleSheet("background-color: red")
-        self.ascender_remote_up_left_arrow.clicked.connect(self.toggle_button_color)
+        self.robot2_remote_up_left_arrow = self.create_toggle_button_false("<^")
+        self.robot2_remote_up_left_arrow.setStyleSheet("background-color: red")
+        self.robot2_remote_up_left_arrow.clicked.connect(self.toggle_button_color)
 
-        self.ascender_remote_up_right_arrow = self.create_toggle_button_false("^>")
-        self.ascender_remote_up_right_arrow.setStyleSheet("background-color: red")
-        self.ascender_remote_up_right_arrow.clicked.connect(self.toggle_button_color)
+        self.robot2_remote_up_right_arrow = self.create_toggle_button_false("^>")
+        self.robot2_remote_up_right_arrow.setStyleSheet("background-color: red")
+        self.robot2_remote_up_right_arrow.clicked.connect(self.toggle_button_color)
 
-        self.ascender_remote_down_left_arrow = self.create_toggle_button_false("<v")
-        self.ascender_remote_down_left_arrow.setStyleSheet("background-color: red")
-        self.ascender_remote_down_left_arrow.clicked.connect(self.toggle_button_color)
+        self.robot2_remote_down_left_arrow = self.create_toggle_button_false("<v")
+        self.robot2_remote_down_left_arrow.setStyleSheet("background-color: red")
+        self.robot2_remote_down_left_arrow.clicked.connect(self.toggle_button_color)
 
-        self.ascender_remote_down_right_arrow = self.create_toggle_button_false("v>")
-        self.ascender_remote_down_right_arrow.setStyleSheet("background-color: red")
-        self.ascender_remote_down_right_arrow.clicked.connect(self.toggle_button_color)
+        self.robot2_remote_down_right_arrow = self.create_toggle_button_false("v>")
+        self.robot2_remote_down_right_arrow.setStyleSheet("background-color: red")
+        self.robot2_remote_down_right_arrow.clicked.connect(self.toggle_button_color)
 
-        self.ascender_remote_stop_arrow = self.create_toggle_button_false("O")
-        self.ascender_remote_stop_arrow.setStyleSheet("background-color: red")
-        self.ascender_remote_stop_arrow.clicked.connect(self.toggle_button_color)
+        self.robot2_remote_stop_arrow = self.create_toggle_button_false("O")
+        self.robot2_remote_stop_arrow.setStyleSheet("background-color: red")
+        self.robot2_remote_stop_arrow.clicked.connect(self.toggle_button_color)
         
         
         velocity_group = QGroupBox("Velocity")
         velocity_layout = QHBoxLayout()
-        self.ascender_remote_velocity_edit = QLineEdit()
-        self.ascender_remote_velocity_set_button = QPushButton("Set")
-        velocity_layout.addWidget(self.ascender_remote_velocity_edit)
-        velocity_layout.addWidget(self.ascender_remote_velocity_set_button)
+        self.robot2_remote_velocity_edit = QLineEdit()
+        self.robot2_remote_velocity_set_button = QPushButton("Set")
+        velocity_layout.addWidget(self.robot2_remote_velocity_edit)
+        velocity_layout.addWidget(self.robot2_remote_velocity_set_button)
         velocity_group.setLayout(velocity_layout)
         velocity_group.setFixedHeight(100)
 
         theta_group = QGroupBox("theta")
         theta_layout = QHBoxLayout()
-        self.ascender_remote_theta_edit = QLineEdit()
-        self.ascender_remote_theta_set_button = QPushButton("Set")
-        theta_layout.addWidget(self.ascender_remote_theta_edit)
-        theta_layout.addWidget(self.ascender_remote_theta_set_button)
+        self.robot2_remote_theta_edit = QLineEdit()
+        self.robot2_remote_theta_set_button = QPushButton("Set")
+        theta_layout.addWidget(self.robot2_remote_theta_edit)
+        theta_layout.addWidget(self.robot2_remote_theta_set_button)
         theta_group.setLayout(theta_layout)
         theta_group.setFixedHeight(100)
         
         
-        remote_layout.addWidget(self.ascender_remote_up_arrow, 0, 1)  # Up
-        remote_layout.addWidget(self.ascender_remote_left_arrow, 1, 0)  # Left
-        remote_layout.addWidget(self.ascender_remote_right_arrow, 1, 2)  # Right
-        remote_layout.addWidget(self.ascender_remote_down_arrow, 2, 1)  # Down
-        remote_layout.addWidget(self.ascender_remote_up_left_arrow, 0, 0)  # Up Left
-        remote_layout.addWidget(self.ascender_remote_up_right_arrow, 0, 2)  # Up Right
-        remote_layout.addWidget(self.ascender_remote_down_left_arrow, 2, 0)  # Down Left
-        remote_layout.addWidget(self.ascender_remote_down_right_arrow, 2, 2)  # Down Right
-        remote_layout.addWidget(self.ascender_remote_stop_arrow, 1, 1)  # Stop
+        remote_layout.addWidget(self.robot2_remote_up_arrow, 0, 1)  # Up
+        remote_layout.addWidget(self.robot2_remote_left_arrow, 1, 0)  # Left
+        remote_layout.addWidget(self.robot2_remote_right_arrow, 1, 2)  # Right
+        remote_layout.addWidget(self.robot2_remote_down_arrow, 2, 1)  # Down
+        remote_layout.addWidget(self.robot2_remote_up_left_arrow, 0, 0)  # Up Left
+        remote_layout.addWidget(self.robot2_remote_up_right_arrow, 0, 2)  # Up Right
+        remote_layout.addWidget(self.robot2_remote_down_left_arrow, 2, 0)  # Down Left
+        remote_layout.addWidget(self.robot2_remote_down_right_arrow, 2, 2)  # Down Right
+        remote_layout.addWidget(self.robot2_remote_stop_arrow, 1, 1)  # Stop
         remote_layout.addWidget(velocity_group, 3, 0, 1, 3)
         remote_layout.addWidget(theta_group, 4, 0, 1, 3)
         remote_controller_group.setLayout(remote_layout)
@@ -533,24 +532,24 @@ class ManualWindow(QWidget):
         joint_motor_layout.addWidget(set_btn, idx+1, 0, 1, 4)
         joint_motor_group.setLayout(joint_motor_layout)
 
-        # Ascender motor box
-        ascender_motor_group = QGroupBox("Ascender motor")
-        ascender_motor_layout = QHBoxLayout()
+        # robot2 motor box
+        robot2_motor_group = QGroupBox("robot2 motor")
+        robot2_motor_layout = QHBoxLayout()
         self.left_btn = QPushButton("Left")
-        self.left_btn.setObjectName("ascender_activation_left")
+        self.left_btn.setObjectName("robot2_activation_left")
         self.left_btn.setCheckable(True)
         self.left_btn.setChecked(True)
         self.left_btn.setStyleSheet("background-color: green")
         self.left_btn.clicked.connect(self.toggle_button_color)
         self.right_btn = QPushButton("Right")
-        self.right_btn.setObjectName("ascender_activation_right")
+        self.right_btn.setObjectName("robot2_activation_right")
         self.right_btn.setCheckable(True)
         self.right_btn.setChecked(True)
         self.right_btn.setStyleSheet("background-color: green")
         self.right_btn.clicked.connect(self.toggle_button_color)
-        ascender_motor_layout.addWidget(self.left_btn)
-        ascender_motor_layout.addWidget(self.right_btn)
-        ascender_motor_group.setLayout(ascender_motor_layout)
+        robot2_motor_layout.addWidget(self.left_btn)
+        robot2_motor_layout.addWidget(self.right_btn)
+        robot2_motor_group.setLayout(robot2_motor_layout)
 
         # Wheel motor box
         wheel_motor_group = QGroupBox("Wheel motor")
@@ -583,7 +582,7 @@ class ManualWindow(QWidget):
         turret_motor_group.setLayout(turret_motor_layout)
 
         layout.addWidget(joint_motor_group)
-        layout.addWidget(ascender_motor_group)
+        layout.addWidget(robot2_motor_group)
         layout.addWidget(wheel_motor_group)
         layout.addWidget(turret_motor_group)
         group.setLayout(layout)
@@ -593,25 +592,25 @@ class ManualWindow(QWidget):
         group = QGroupBox("Anchor motor")
         layout = QVBoxLayout()
 
-        anchor1_group = QGroupBox("Anchor1")
-        anchor1_layout = QHBoxLayout()
-        self.anchor1_activation_track_btn = self.create_toggle_button_true("Track")
-        self.anchor1_activation_fix_left_btn = self.create_toggle_button_true("Left Fix")
-        self.anchor1_activation_fix_right_btn = self.create_toggle_button_true("Right Fix")
-        anchor1_layout.addWidget(self.anchor1_activation_track_btn)
-        anchor1_layout.addWidget(self.anchor1_activation_fix_left_btn)
-        anchor1_layout.addWidget(self.anchor1_activation_fix_right_btn)
-        anchor1_group.setLayout(anchor1_layout)
+        robot1_group = QGroupBox("robot1")
+        robot1_layout = QHBoxLayout()
+        self.robot1_activation_track_btn = self.create_toggle_button_true("Track")
+        self.robot1_activation_fix_left_btn = self.create_toggle_button_true("Left Fix")
+        self.robot1_activation_fix_right_btn = self.create_toggle_button_true("Right Fix")
+        robot1_layout.addWidget(self.robot1_activation_track_btn)
+        robot1_layout.addWidget(self.robot1_activation_fix_left_btn)
+        robot1_layout.addWidget(self.robot1_activation_fix_right_btn)
+        robot1_group.setLayout(robot1_layout)
 
-        anchor2_group = QGroupBox("Anchor2")
-        anchor2_layout = QHBoxLayout()
-        self.anchor2_activation_track_btn = self.create_toggle_button_true("Track")
-        self.anchor2_activation_fix_left_btn = self.create_toggle_button_true("Left Fix")
-        self.anchor2_activation_fix_right_btn = self.create_toggle_button_true("Right Fix")
-        anchor2_layout.addWidget(self.anchor2_activation_track_btn)
-        anchor2_layout.addWidget(self.anchor2_activation_fix_left_btn)
-        anchor2_layout.addWidget(self.anchor2_activation_fix_right_btn)
-        anchor2_group.setLayout(anchor2_layout)
+        robot4_group = QGroupBox("robot4")
+        robot4_layout = QHBoxLayout()
+        self.robot4_activation_track_btn = self.create_toggle_button_true("Track")
+        self.robot4_activation_fix_left_btn = self.create_toggle_button_true("Left Fix")
+        self.robot4_activation_fix_right_btn = self.create_toggle_button_true("Right Fix")
+        robot4_layout.addWidget(self.robot4_activation_track_btn)
+        robot4_layout.addWidget(self.robot4_activation_fix_left_btn)
+        robot4_layout.addWidget(self.robot4_activation_fix_right_btn)
+        robot4_group.setLayout(robot4_layout)
 
         turret_group = QGroupBox("Turret")
         turret_layout = QVBoxLayout()
@@ -656,8 +655,8 @@ class ManualWindow(QWidget):
 
         turret_group.setLayout(turret_layout)
 
-        layout.addWidget(anchor1_group)
-        layout.addWidget(anchor2_group)
+        layout.addWidget(robot1_group)
+        layout.addWidget(robot4_group)
         layout.addWidget(turret_group)
         group.setLayout(layout)
         return group
@@ -777,7 +776,7 @@ class MainWindow(QMainWindow):
         layout = QHBoxLayout(central_widget)
 
         # Title
-        self.setWindowTitle("BRIDGE_UI")
+        self.setWindowTitle("Robot_Test_UI")
 
         # Adding Main control switch page
         control_switch = self.create_main_control_switch_group()
@@ -789,24 +788,24 @@ class MainWindow(QMainWindow):
         mode_layout.addWidget(self.stacked_widget)
 
         # Adding pages to the StackedWidget
-        self.setup_page = SetupWindow()
-        self.manual_page = ManualWindow()
+        self.page1 = SetupWindow()
+        self.page2 = ManualWindow()
         
 
-        self.stacked_widget.addWidget(self.setup_page)
-        self.stacked_widget.addWidget(self.manual_page)
+        self.stacked_widget.addWidget(self.page1)
+        self.stacked_widget.addWidget(self.page2)
         
 
         # Setting default page
-        self.stacked_widget.setCurrentWidget(self.setup_page)
+        self.stacked_widget.setCurrentWidget(self.page1)
 
         # Page Switch Buttons
         btn_layout = QHBoxLayout()
         setup_btn = QPushButton("Switch to Setup Page")
         manual_btn = QPushButton("Switch to Manual Page")
         
-        setup_btn.clicked.connect(lambda: self.stacked_widget.setCurrentWidget(self.setup_page))
-        manual_btn.clicked.connect(lambda: self.stacked_widget.setCurrentWidget(self.manual_page))
+        setup_btn.clicked.connect(lambda: self.stacked_widget.setCurrentWidget(self.page1))
+        manual_btn.clicked.connect(lambda: self.stacked_widget.setCurrentWidget(self.page2))
         
         btn_layout.addWidget(setup_btn)
         btn_layout.addWidget(manual_btn)
@@ -820,15 +819,15 @@ class MainWindow(QMainWindow):
         self.robot_activation_btn = self.create_toggle_button_false("Robot Activation")
         self.stop_btn = self.create_toggle_button_false("Stop")
         self.break_btn = self.create_toggle_button_false("Break")
-        self.anchor_activation_btn = self.create_toggle_button_false("Anchor Activation")
+        self.robot4_activation_btn = self.create_toggle_button_false("robot4 Activation")
         self.total_calibration_btn = self.create_toggle_button_false_A("Total Calibration")
-        self.ascender_calibration_btn = self.create_toggle_button_false_A("Ascender Calibration")
+        self.robot2_calibration_btn = self.create_toggle_button_false_A("robot2 Calibration")
         self.joint_calibration_btn = self.create_toggle_button_false_A("Joint Calibration")
         self.wheel_calibration_btn = self.create_toggle_button_false_A("Wheel Calibration")
         self.turret_calibration_btn = self.create_toggle_button_false_A("Turret Calibration")
-        self.anchor_calibration_btn = self.create_toggle_button_false_A("Anchor Calibration")
+        self.robot4_calibration_btn = self.create_toggle_button_false_A("robot4 Calibration")
         
-        self.ascender_activation_btn = self.create_toggle_button_false("Ascender Activation")
+        self.robot2_activation_btn = self.create_toggle_button_false("robot2 Activation")
         self.joint_activation_btn = self.create_toggle_button_false("Joint Activation")
         self.turret_activation_btn = self.create_toggle_button_false_A("Turret Activation")
         self.turret_dir_btn = self.create_toggle_button_false_A("Turret Dir")
@@ -836,7 +835,7 @@ class MainWindow(QMainWindow):
         self.wheel_activation_btn = self.create_toggle_button_false("Wheel Activation")
         self.wheel_turn_btn = self.create_toggle_button_false("Wheel Turn")
 
-        self.calibration_radio = QRadioButton("Land")
+        self.land_radio = QRadioButton("Land")
         self.stand_radio = QRadioButton("Stand")
     
         self.stable_radio = QRadioButton("Stable")
@@ -844,7 +843,7 @@ class MainWindow(QMainWindow):
         self.climbing = QRadioButton("Climbing")        
         
         cal_group=QButtonGroup(self)
-        cal_group.addButton(self.calibration_radio)
+        cal_group.addButton(self.land_radio)
         cal_group.addButton(self.stand_radio)
         
         climb_group=QButtonGroup(self)
@@ -858,24 +857,21 @@ class MainWindow(QMainWindow):
         layout.addWidget(self.break_btn)
         
         layout.addWidget(self.total_calibration_btn)
-        layout.addWidget(self.ascender_calibration_btn)
+        layout.addWidget(self.robot2_calibration_btn)
         layout.addWidget(self.joint_calibration_btn)
         layout.addWidget(self.wheel_calibration_btn)
         layout.addWidget(self.turret_calibration_btn)      
-        layout.addWidget(self.anchor_calibration_btn)  
-        layout.addWidget(self.ascender_activation_btn)
+        layout.addWidget(self.robot2_activation_btn)
 
-        layout.addWidget(self.anchor_activation_btn)
+
         layout.addWidget(self.joint_activation_btn)
         layout.addWidget(self.turret_activation_btn)
         layout.addWidget(self.turret_dir_btn)
         layout.addWidget(self.wheel_activation_btn)
         layout.addWidget(self.wheel_turn_btn)
         
-        layout.addWidget(self.calibration_radio)
+        layout.addWidget(self.land_radio)
         layout.addWidget(self.stand_radio)
-        
-        ## Need to seperate
         layout.addWidget(self.stable_radio)
         layout.addWidget(self.climbing_ready_radio)
         layout.addWidget(self.climbing)          
