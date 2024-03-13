@@ -1,0 +1,24 @@
+[0.388s] Invoking command in '/home/kjh/robot_gui_pkg/src/ros2_gui': PYTHONPATH=/home/kjh/robot_gui_pkg/build/ros2_gui/prefix_override:/home/kjh/robot_gui_pkg/install/ros2_gui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ros2_gui build --build-base /home/kjh/robot_gui_pkg/build/ros2_gui/build install --record /home/kjh/robot_gui_pkg/build/ros2_gui/install.log --single-version-externally-managed
+[0.528s] running egg_info
+[0.528s] writing ../../build/ros2_gui/ros2_gui.egg-info/PKG-INFO
+[0.528s] writing dependency_links to ../../build/ros2_gui/ros2_gui.egg-info/dependency_links.txt
+[0.528s] writing entry points to ../../build/ros2_gui/ros2_gui.egg-info/entry_points.txt
+[0.528s] writing requirements to ../../build/ros2_gui/ros2_gui.egg-info/requires.txt
+[0.528s] writing top-level names to ../../build/ros2_gui/ros2_gui.egg-info/top_level.txt
+[0.529s] reading manifest file '../../build/ros2_gui/ros2_gui.egg-info/SOURCES.txt'
+[0.529s] writing manifest file '../../build/ros2_gui/ros2_gui.egg-info/SOURCES.txt'
+[0.529s] running build
+[0.529s] running build_py
+[0.530s] copying ros2_gui/__init__.py -> /home/kjh/robot_gui_pkg/build/ros2_gui/build/lib/ros2_gui
+[0.530s] running install
+[0.530s] running install_lib
+[0.530s] copying /home/kjh/robot_gui_pkg/build/ros2_gui/build/lib/ros2_gui/__init__.py -> /home/kjh/robot_gui_pkg/install/ros2_gui/lib/python3.10/site-packages/ros2_gui
+[0.530s] byte-compiling /home/kjh/robot_gui_pkg/install/ros2_gui/lib/python3.10/site-packages/ros2_gui/__init__.py to __init__.cpython-310.pyc
+[0.530s] running install_data
+[0.531s] running install_egg_info
+[0.531s] removing '/home/kjh/robot_gui_pkg/install/ros2_gui/lib/python3.10/site-packages/ros2_gui-0.0.0-py3.10.egg-info' (and everything under it)
+[0.532s] Copying ../../build/ros2_gui/ros2_gui.egg-info to /home/kjh/robot_gui_pkg/install/ros2_gui/lib/python3.10/site-packages/ros2_gui-0.0.0-py3.10.egg-info
+[0.532s] running install_scripts
+[0.542s] Installing run_ui script to /home/kjh/robot_gui_pkg/install/ros2_gui/lib/ros2_gui
+[0.542s] writing list of installed files to '/home/kjh/robot_gui_pkg/build/ros2_gui/install.log'
+[0.556s] Invoked command in '/home/kjh/robot_gui_pkg/src/ros2_gui' returned '0': PYTHONPATH=/home/kjh/robot_gui_pkg/build/ros2_gui/prefix_override:/home/kjh/robot_gui_pkg/install/ros2_gui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ros2_gui build --build-base /home/kjh/robot_gui_pkg/build/ros2_gui/build install --record /home/kjh/robot_gui_pkg/build/ros2_gui/install.log --single-version-externally-managed

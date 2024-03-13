@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from ros2_interfaces/msg/BridgeError.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module ros2_interfaces {
+  module msg {
+    struct BridgeError {
+      std_msgs::msg::Header header;
+
+      int64 error_can;
+
+      sequence<int64> error_joint_stuck;
+
+      sequence<int64> is_error_over_current;
+
+      sequence<int64> is_error_over_range;
+    };
+  };
+};

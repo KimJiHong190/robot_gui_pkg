@@ -1,0 +1,425 @@
+[0.007s] Invoking command in '/home/kjh/robot_gui_pkg/build/robot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kjh/robot_gui_pkg/install/ros2_gui:/opt/ros/humble /home/kjh/.local/bin/cmake /home/kjh/robot_gui_pkg/src/robot_interfaces -DCMAKE_INSTALL_PREFIX=/home/kjh/robot_gui_pkg/install/robot_interfaces
+[0.048s] -- The C compiler identification is GNU 11.4.0
+[0.088s] -- The CXX compiler identification is GNU 11.4.0
+[0.093s] -- Detecting C compiler ABI info
+[0.129s] -- Detecting C compiler ABI info - done
+[0.135s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.135s] -- Detecting C compile features
+[0.135s] -- Detecting C compile features - done
+[0.137s] -- Detecting CXX compiler ABI info
+[0.173s] -- Detecting CXX compiler ABI info - done
+[0.180s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.180s] -- Detecting CXX compile features
+[0.180s] -- Detecting CXX compile features - done
+[0.182s] -- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.515s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.570s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.594s] -- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.598s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.603s] -- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.612s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.625s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.702s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.857s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.023s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.091s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.106s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.107s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.124s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.124s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.124s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.124s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.136s] -- Found PythonExtra: .so  
+[1.177s] -- Found ament_lint_auto: 0.12.6 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.194s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.195s] -- Added test 'lint_cmake' to check CMake code style
+[1.195s] -- Added test 'xmllint' to check XML markup files
+[1.197s] -- Configuring done (1.2s)
+[1.223s] -- Generating done (0.0s)
+[1.224s] -- Build files have been written to: /home/kjh/robot_gui_pkg/build/robot_interfaces
+[1.233s] Invoked command in '/home/kjh/robot_gui_pkg/build/robot_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kjh/robot_gui_pkg/install/ros2_gui:/opt/ros/humble /home/kjh/.local/bin/cmake /home/kjh/robot_gui_pkg/src/robot_interfaces -DCMAKE_INSTALL_PREFIX=/home/kjh/robot_gui_pkg/install/robot_interfaces
+[1.233s] Invoking command in '/home/kjh/robot_gui_pkg/build/robot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kjh/robot_gui_pkg/install/ros2_gui:/opt/ros/humble /home/kjh/.local/bin/cmake --build /home/kjh/robot_gui_pkg/build/robot_interfaces -- -j20 -l20
+[1.268s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.274s] [  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.276s] [  2%] Built target ament_cmake_python_copy_robot_interfaces
+[1.427s] running egg_info
+[1.428s] creating robot_interfaces.egg-info
+[1.428s] writing robot_interfaces.egg-info/PKG-INFO
+[1.428s] writing dependency_links to robot_interfaces.egg-info/dependency_links.txt
+[1.428s] writing top-level names to robot_interfaces.egg-info/top_level.txt
+[1.428s] writing manifest file 'robot_interfaces.egg-info/SOURCES.txt'
+[1.429s] reading manifest file 'robot_interfaces.egg-info/SOURCES.txt'
+[1.429s] writing manifest file 'robot_interfaces.egg-info/SOURCES.txt'
+[1.441s] [  2%] Built target ament_cmake_python_build_robot_interfaces_egg
+[1.562s] [  2%] Built target robot_interfaces__cpp
+[1.565s] [  3%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.565s] [  4%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.565s] [  5%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.576s] [  6%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_interfaces/msg/detail/bridge_bool_multi_array__functions.c.o[0m
+[1.576s] [  9%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_interfaces/msg/detail/bridge_joint_state_with_accel__functions.c.o[0m
+[1.576s] [  9%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_interfaces/msg/detail/bridge_float32_multi_array__functions.c.o[0m
+[1.576s] [ 10%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_interfaces/msg/detail/bridge_dt__functions.c.o[0m
+[1.577s] [ 11%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_interfaces/msg/detail/bridge_error__functions.c.o[0m
+[1.577s] [ 12%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_interfaces/msg/detail/bridge_string_multi_array__functions.c.o[0m
+[1.577s] [ 13%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_interfaces/msg/detail/bridge_current__functions.c.o[0m
+[1.577s] [ 14%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_interfaces/msg/detail/bridge_robot_status__functions.c.o[0m
+[1.612s] [ 16%] [32m[1mLinking C shared library librobot_interfaces__rosidl_generator_c.so[0m
+[1.626s] [ 16%] Built target robot_interfaces__rosidl_generator_c
+[1.629s] [ 17%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[1.629s] [ 19%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.629s] [ 19%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.762s] [ 20%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_interfaces/msg/bridge_bool_multi_array__type_support.cpp.o[0m
+[1.762s] [ 21%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_interfaces/msg/bridge_float32_multi_array__type_support.cpp.o[0m
+[1.763s] [ 22%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_interfaces/msg/bridge_current__type_support.cpp.o[0m
+[1.763s] [ 24%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_interfaces/msg/bridge_joint_state_with_accel__type_support.cpp.o[0m
+[1.763s] [ 25%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_interfaces/msg/bridge_string_multi_array__type_support.cpp.o[0m
+[1.763s] [ 26%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_interfaces/msg/bridge_dt__type_support.cpp.o[0m
+[1.763s] [ 27%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_interfaces/msg/bridge_error__type_support.cpp.o[0m
+[1.763s] [ 28%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_interfaces/msg/bridge_robot_status__type_support.cpp.o[0m
+[1.802s] [ 29%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_interfaces/msg/detail/bridge_bool_multi_array__type_support.cpp.o[0m
+[1.802s] [ 32%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_interfaces/msg/detail/bridge_float32_multi_array__type_support.cpp.o[0m
+[1.803s] [ 32%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_interfaces/msg/detail/bridge_string_multi_array__type_support.cpp.o[0m
+[1.803s] [ 33%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_interfaces/msg/detail/bridge_joint_state_with_accel__type_support.cpp.o[0m
+[1.803s] [ 34%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_interfaces/msg/detail/bridge_dt__type_support.cpp.o[0m
+[1.803s] [ 35%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_interfaces/msg/detail/bridge_current__type_support.cpp.o[0m
+[1.803s] [ 36%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_interfaces/msg/detail/bridge_error__type_support.cpp.o[0m
+[1.820s] [ 37%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_interfaces/msg/detail/bridge_robot_status__type_support.cpp.o[0m
+[1.841s] [ 39%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_interfaces/msg/bridge_bool_multi_array__type_support.cpp.o[0m
+[1.866s] [ 40%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_interfaces/msg/bridge_float32_multi_array__type_support.cpp.o[0m
+[1.867s] [ 41%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_interfaces/msg/detail/dds_fastrtps/bridge_bool_multi_array__type_support.cpp.o[0m
+[1.904s] [ 42%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_interfaces/msg/bridge_joint_state_with_accel__type_support.cpp.o[0m
+[1.931s] [ 43%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_interfaces/msg/bridge_string_multi_array__type_support.cpp.o[0m
+[1.945s] [ 45%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_interfaces/msg/bridge_dt__type_support.cpp.o[0m
+[1.946s] [ 45%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_interfaces/msg/detail/dds_fastrtps/bridge_float32_multi_array__type_support.cpp.o[0m
+[1.970s] [ 49%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_interfaces/msg/bridge_current__type_support.cpp.o[0m
+[1.970s] [ 49%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_interfaces/msg/detail/dds_fastrtps/bridge_joint_state_with_accel__type_support.cpp.o[0m
+[1.970s] [ 49%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_interfaces/msg/detail/dds_fastrtps/bridge_string_multi_array__type_support.cpp.o[0m
+[1.981s] [ 50%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_interfaces/msg/detail/dds_fastrtps/bridge_dt__type_support.cpp.o[0m
+[1.994s] [ 51%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_interfaces/msg/bridge_error__type_support.cpp.o[0m
+[1.998s] [ 52%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_interfaces/msg/detail/dds_fastrtps/bridge_current__type_support.cpp.o[0m
+[2.003s] [ 54%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_interfaces/msg/detail/bridge_bool_multi_array__type_support_c.cpp.o[0m
+[2.014s] [ 55%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_interfaces/msg/detail/bridge_bool_multi_array__type_support.c.o[0m
+[2.017s] [ 56%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_interfaces/msg/bridge_robot_status__type_support.cpp.o[0m
+[2.042s] [ 57%] [32m[1mLinking CXX shared library librobot_interfaces__rosidl_typesupport_c.so[0m
+[2.045s] [ 58%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_interfaces/msg/detail/bridge_float32_multi_array__type_support.c.o[0m
+[2.046s] [ 59%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_interfaces/msg/detail/bridge_float32_multi_array__type_support_c.cpp.o[0m
+[2.048s] [ 60%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_interfaces/msg/detail/bridge_joint_state_with_accel__type_support.c.o[0m
+[2.056s] [ 62%] [32m[1mLinking CXX shared library librobot_interfaces__rosidl_typesupport_cpp.so[0m
+[2.082s] [ 63%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_interfaces/msg/detail/bridge_string_multi_array__type_support.c.o[0m
+[2.091s] [ 64%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_interfaces/msg/detail/bridge_dt__type_support.c.o[0m
+[2.111s] [ 64%] Built target robot_interfaces__rosidl_typesupport_cpp
+[2.114s] [ 65%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_interfaces/msg/detail/bridge_current__type_support.c.o[0m
+[2.118s] [ 66%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_interfaces/msg/detail/bridge_error__type_support.c.o[0m
+[2.118s] [ 66%] Built target robot_interfaces__rosidl_typesupport_c
+[2.119s] [ 67%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_interfaces/msg/detail/bridge_robot_status__type_support.c.o[0m
+[2.122s] [ 68%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_interfaces/msg/detail/bridge_joint_state_with_accel__type_support_c.cpp.o[0m
+[2.148s] [ 71%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_interfaces/msg/detail/dds_fastrtps/bridge_error__type_support.cpp.o[0m
+[2.148s] [ 71%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_interfaces/msg/detail/bridge_string_multi_array__type_support_c.cpp.o[0m
+[2.149s] [ 72%] [32m[1mLinking C shared library librobot_interfaces__rosidl_typesupport_introspection_c.so[0m
+[2.156s] [ 73%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_interfaces/msg/detail/dds_fastrtps/bridge_robot_status__type_support.cpp.o[0m
+[2.161s] [ 74%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_interfaces/msg/detail/bridge_dt__type_support_c.cpp.o[0m
+[2.162s] [ 75%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_interfaces/msg/detail/bridge_current__type_support_c.cpp.o[0m
+[2.167s] [ 75%] Built target robot_interfaces__rosidl_typesupport_introspection_c
+[2.170s] [ 77%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_interfaces/msg/detail/bridge_error__type_support_c.cpp.o[0m
+[2.208s] [ 78%] [32mBuilding CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_interfaces/msg/detail/bridge_robot_status__type_support_c.cpp.o[0m
+[2.252s] [ 79%] [32m[1mLinking CXX shared library librobot_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[2.337s] [ 79%] Built target robot_interfaces__rosidl_typesupport_introspection_cpp
+[2.430s] [ 80%] [32m[1mLinking CXX shared library librobot_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[2.464s] [ 80%] Built target robot_interfaces__rosidl_typesupport_fastrtps_c
+[2.485s] [ 81%] [32m[1mLinking CXX shared library librobot_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[2.524s] [ 81%] Built target robot_interfaces__rosidl_typesupport_fastrtps_cpp
+[2.529s] [ 81%] Built target robot_interfaces
+[2.534s] [ 82%] [34m[1mGenerating Python code for ROS interfaces[0m
+[3.004s] [ 82%] Built target robot_interfaces__py
+[3.009s] [ 83%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/robot_interfaces/msg/_bridge_bool_multi_array_s.c.o[0m
+[3.009s] [ 85%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/robot_interfaces/msg/_bridge_float32_multi_array_s.c.o[0m
+[3.009s] [ 87%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/robot_interfaces/msg/_bridge_joint_state_with_accel_s.c.o[0m
+[3.009s] [ 87%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/robot_interfaces/msg/_bridge_string_multi_array_s.c.o[0m
+[3.009s] [ 89%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/robot_interfaces/msg/_bridge_current_s.c.o[0m
+[3.009s] [ 89%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/robot_interfaces/msg/_bridge_dt_s.c.o[0m
+[3.009s] [ 90%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/robot_interfaces/msg/_bridge_error_s.c.o[0m
+[3.009s] [ 91%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/robot_interfaces/msg/_bridge_robot_status_s.c.o[0m
+[3.075s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/robot_interfaces/librobot_interfaces__rosidl_generator_py.so[0m
+[3.092s] [ 93%] Built target robot_interfaces__rosidl_generator_py
+[3.097s] [ 94%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/robot_interfaces/_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[3.097s] [ 95%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/robot_interfaces/_robot_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[3.097s] [ 96%] [32mBuilding C object CMakeFiles/robot_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/robot_interfaces/_robot_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[3.153s] [100%] [32m[1mLinking C shared library rosidl_generator_py/robot_interfaces/robot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.153s] [100%] [32m[1mLinking C shared library rosidl_generator_py/robot_interfaces/robot_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.153s] [100%] [32m[1mLinking C shared library rosidl_generator_py/robot_interfaces/robot_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.168s] [100%] Built target robot_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[3.168s] [100%] Built target robot_interfaces__rosidl_typesupport_introspection_c__pyext
+[3.168s] [100%] Built target robot_interfaces__rosidl_typesupport_c__pyext
+[3.174s] Invoked command in '/home/kjh/robot_gui_pkg/build/robot_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kjh/robot_gui_pkg/install/ros2_gui:/opt/ros/humble /home/kjh/.local/bin/cmake --build /home/kjh/robot_gui_pkg/build/robot_interfaces -- -j20 -l20
+[3.640s] Invoking command in '/home/kjh/robot_gui_pkg/build/robot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kjh/robot_gui_pkg/install/ros2_gui:/opt/ros/humble /home/kjh/.local/bin/cmake --install /home/kjh/robot_gui_pkg/build/robot_interfaces
+[3.655s] -- Install configuration: ""
+[3.655s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/ament_index/resource_index/rosidl_interfaces/robot_interfaces
+[3.655s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces
+[3.655s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg
+[3.655s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/bridge_dt.h
+[3.655s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/bridge_robot_status.h
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/bridge_bool_multi_array.h
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/bridge_float32_multi_array.h
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/bridge_error.h
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/bridge_string_multi_array.h
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/rosidl_generator_c__visibility_control.h
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_current__struct.h
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_dt__functions.h
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_bool_multi_array__functions.h
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_dt__functions.c
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_error__functions.h
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_dt__struct.h
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_bool_multi_array__functions.c
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_error__struct.h
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_float32_multi_array__functions.c
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_robot_status__struct.h
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_string_multi_array__functions.c
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_error__type_support.h
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_float32_multi_array__functions.h
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_robot_status__functions.c
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_string_multi_array__functions.h
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_error__functions.c
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_current__functions.c
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_bool_multi_array__struct.h
+[3.656s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_joint_state_with_accel__functions.c
+[3.657s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_float32_multi_array__type_support.h
+[3.657s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_string_multi_array__struct.h
+[3.657s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_current__type_support.h
+[3.657s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_string_multi_array__type_support.h
+[3.657s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_robot_status__type_support.h
+[3.657s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_joint_state_with_accel__type_support.h
+[3.657s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_float32_multi_array__struct.h
+[3.657s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_dt__type_support.h
+[3.657s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_joint_state_with_accel__functions.h
+[3.657s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_bool_multi_array__type_support.h
+[3.657s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_robot_status__functions.h
+[3.657s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_joint_state_with_accel__struct.h
+[3.657s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_current__functions.h
+[3.657s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/bridge_joint_state_with_accel.h
+[3.657s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/bridge_current.h
+[3.657s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/environment/library_path.sh
+[3.657s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/environment/library_path.dsv
+[3.657s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/lib/librobot_interfaces__rosidl_generator_c.so
+[3.657s] -- Set runtime path of "/home/kjh/robot_gui_pkg/install/robot_interfaces/lib/librobot_interfaces__rosidl_generator_c.so" to ""
+[3.657s] -- Up-to-date: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces
+[3.657s] -- Up-to-date: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg
+[3.657s] -- Up-to-date: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail
+[3.657s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_float32_multi_array__rosidl_typesupport_fastrtps_c.h
+[3.657s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_current__rosidl_typesupport_fastrtps_c.h
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_joint_state_with_accel__rosidl_typesupport_fastrtps_c.h
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_robot_status__rosidl_typesupport_fastrtps_c.h
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_error__rosidl_typesupport_fastrtps_c.h
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_dt__rosidl_typesupport_fastrtps_c.h
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_string_multi_array__rosidl_typesupport_fastrtps_c.h
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_bool_multi_array__rosidl_typesupport_fastrtps_c.h
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_fastrtps_c.so
+[3.658s] -- Set runtime path of "/home/kjh/robot_gui_pkg/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[3.658s] -- Up-to-date: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces
+[3.658s] -- Up-to-date: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/bridge_error.hpp
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/bridge_robot_status.hpp
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/bridge_dt.hpp
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/bridge_joint_state_with_accel.hpp
+[3.658s] -- Up-to-date: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_float32_multi_array__traits.hpp
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_robot_status__struct.hpp
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_robot_status__builder.hpp
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_string_multi_array__struct.hpp
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_string_multi_array__traits.hpp
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_joint_state_with_accel__builder.hpp
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_error__struct.hpp
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_float32_multi_array__builder.hpp
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_current__struct.hpp
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_dt__builder.hpp
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_robot_status__traits.hpp
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_dt__struct.hpp
+[3.658s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_current__traits.hpp
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_bool_multi_array__builder.hpp
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_joint_state_with_accel__traits.hpp
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_joint_state_with_accel__struct.hpp
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_error__builder.hpp
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_error__traits.hpp
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_string_multi_array__builder.hpp
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_bool_multi_array__traits.hpp
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_dt__traits.hpp
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_float32_multi_array__struct.hpp
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_bool_multi_array__struct.hpp
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_current__builder.hpp
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/bridge_float32_multi_array.hpp
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/bridge_bool_multi_array.hpp
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/bridge_string_multi_array.hpp
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/bridge_current.hpp
+[3.659s] -- Up-to-date: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces
+[3.659s] -- Up-to-date: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[3.659s] -- Up-to-date: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/dds_fastrtps
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_error__rosidl_typesupport_fastrtps_cpp.hpp
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_joint_state_with_accel__rosidl_typesupport_fastrtps_cpp.hpp
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_float32_multi_array__rosidl_typesupport_fastrtps_cpp.hpp
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_dt__rosidl_typesupport_fastrtps_cpp.hpp
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_string_multi_array__rosidl_typesupport_fastrtps_cpp.hpp
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_robot_status__rosidl_typesupport_fastrtps_cpp.hpp
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_bool_multi_array__rosidl_typesupport_fastrtps_cpp.hpp
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_current__rosidl_typesupport_fastrtps_cpp.hpp
+[3.659s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[3.660s] -- Set runtime path of "/home/kjh/robot_gui_pkg/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[3.660s] -- Up-to-date: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces
+[3.660s] -- Up-to-date: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg
+[3.660s] -- Up-to-date: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail
+[3.660s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_joint_state_with_accel__type_support.c
+[3.660s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_dt__rosidl_typesupport_introspection_c.h
+[3.660s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_bool_multi_array__type_support.c
+[3.660s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_dt__type_support.c
+[3.660s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_error__rosidl_typesupport_introspection_c.h
+[3.660s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_bool_multi_array__rosidl_typesupport_introspection_c.h
+[3.660s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_joint_state_with_accel__rosidl_typesupport_introspection_c.h
+[3.660s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_string_multi_array__rosidl_typesupport_introspection_c.h
+[3.660s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_current__rosidl_typesupport_introspection_c.h
+[3.660s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_string_multi_array__type_support.c
+[3.660s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_error__type_support.c
+[3.660s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_robot_status__type_support.c
+[3.660s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_current__type_support.c
+[3.660s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_float32_multi_array__type_support.c
+[3.660s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_robot_status__rosidl_typesupport_introspection_c.h
+[3.660s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_float32_multi_array__rosidl_typesupport_introspection_c.h
+[3.660s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[3.660s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_introspection_c.so
+[3.661s] -- Set runtime path of "/home/kjh/robot_gui_pkg/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[3.661s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_c.so
+[3.661s] -- Set runtime path of "/home/kjh/robot_gui_pkg/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_c.so" to ""
+[3.661s] -- Up-to-date: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces
+[3.661s] -- Up-to-date: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg
+[3.661s] -- Up-to-date: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail
+[3.661s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_joint_state_with_accel__type_support.cpp
+[3.661s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_dt__type_support.cpp
+[3.661s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_string_multi_array__rosidl_typesupport_introspection_cpp.hpp
+[3.661s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_robot_status__type_support.cpp
+[3.661s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_dt__rosidl_typesupport_introspection_cpp.hpp
+[3.661s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_bool_multi_array__type_support.cpp
+[3.661s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_string_multi_array__type_support.cpp
+[3.661s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_joint_state_with_accel__rosidl_typesupport_introspection_cpp.hpp
+[3.661s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_error__type_support.cpp
+[3.661s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_error__rosidl_typesupport_introspection_cpp.hpp
+[3.661s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_current__type_support.cpp
+[3.661s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_robot_status__rosidl_typesupport_introspection_cpp.hpp
+[3.661s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_float32_multi_array__type_support.cpp
+[3.661s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_float32_multi_array__rosidl_typesupport_introspection_cpp.hpp
+[3.661s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_current__rosidl_typesupport_introspection_cpp.hpp
+[3.661s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/bridge_bool_multi_array__rosidl_typesupport_introspection_cpp.hpp
+[3.661s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_introspection_cpp.so
+[3.661s] -- Set runtime path of "/home/kjh/robot_gui_pkg/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[3.662s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_cpp.so
+[3.662s] -- Set runtime path of "/home/kjh/robot_gui_pkg/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_cpp.so" to ""
+[3.662s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/environment/pythonpath.sh
+[3.662s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/environment/pythonpath.dsv
+[3.662s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces-0.0.0-py3.10.egg-info
+[3.662s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[3.662s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[3.662s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[3.662s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[3.662s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces
+[3.662s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/_robot_interfaces_s.ep.rosidl_typesupport_c.c
+[3.662s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/_robot_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[3.662s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.662s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/__init__.py
+[3.662s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[3.662s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/librobot_interfaces__rosidl_generator_py.so
+[3.662s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.662s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.662s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg
+[3.662s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_joint_state_with_accel_s.c
+[3.662s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_current_s.c
+[3.662s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/__init__.py
+[3.662s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_float32_multi_array_s.c
+[3.663s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_bool_multi_array_s.c
+[3.663s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_dt.py
+[3.663s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_joint_state_with_accel.py
+[3.663s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_robot_status.py
+[3.663s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_error.py
+[3.663s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_current.py
+[3.663s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_robot_status_s.c
+[3.663s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_string_multi_array.py
+[3.663s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_string_multi_array_s.c
+[3.663s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_bool_multi_array.py
+[3.663s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_float32_multi_array.py
+[3.663s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_error_s.c
+[3.663s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_dt_s.c
+[3.689s] Listing '/home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces'...
+[3.689s] Compiling '/home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/__init__.py'...
+[3.689s] Listing '/home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg'...
+[3.689s] Compiling '/home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/__init__.py'...
+[3.689s] Compiling '/home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_bool_multi_array.py'...
+[3.690s] Compiling '/home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_current.py'...
+[3.690s] Compiling '/home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_dt.py'...
+[3.690s] Compiling '/home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_error.py'...
+[3.690s] Compiling '/home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_float32_multi_array.py'...
+[3.690s] Compiling '/home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_joint_state_with_accel.py'...
+[3.690s] Compiling '/home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_robot_status.py'...
+[3.690s] Compiling '/home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_bridge_string_multi_array.py'...
+[3.692s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.692s] -- Set runtime path of "/home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.692s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.692s] -- Set runtime path of "/home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.692s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.692s] -- Set runtime path of "/home/kjh/robot_gui_pkg/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.692s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/lib/librobot_interfaces__rosidl_generator_py.so
+[3.693s] -- Set runtime path of "/home/kjh/robot_gui_pkg/install/robot_interfaces/lib/librobot_interfaces__rosidl_generator_py.so" to ""
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/msg/BridgeBoolMultiArray.idl
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/msg/BridgeFloat32MultiArray.idl
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/msg/BridgeJointStateWithAccel.idl
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/msg/BridgeStringMultiArray.idl
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/msg/BridgeDt.idl
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/msg/BridgeCurrent.idl
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/msg/BridgeError.idl
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/msg/BridgeRobotStatus.idl
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/msg/BridgeBoolMultiArray.msg
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/msg/BridgeFloat32MultiArray.msg
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/msg/BridgeJointStateWithAccel.msg
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/msg/BridgeStringMultiArray.msg
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/msg/BridgeDt.msg
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/msg/BridgeCurrent.msg
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/msg/BridgeError.msg
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/msg/BridgeRobotStatus.msg
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/ament_index/resource_index/package_run_dependencies/robot_interfaces
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/ament_index/resource_index/parent_prefix_path/robot_interfaces
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/environment/ament_prefix_path.sh
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/environment/ament_prefix_path.dsv
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/environment/path.sh
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/environment/path.dsv
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/local_setup.bash
+[3.693s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/local_setup.sh
+[3.694s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/local_setup.zsh
+[3.694s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/local_setup.dsv
+[3.694s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/package.dsv
+[3.694s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/ament_index/resource_index/packages/robot_interfaces
+[3.694s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_generator_cExport.cmake
+[3.694s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_generator_cExport-noconfig.cmake
+[3.694s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[3.694s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[3.694s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_generator_cppExport.cmake
+[3.694s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[3.694s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[3.694s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[3.694s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.694s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_cExport.cmake
+[3.694s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[3.694s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[3.694s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.694s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_cppExport.cmake
+[3.694s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[3.694s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_generator_pyExport.cmake
+[3.694s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[3.694s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/rosidl_cmake-extras.cmake
+[3.695s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.695s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.695s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[3.695s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[3.695s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[3.695s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[3.695s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfacesConfig.cmake
+[3.695s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfacesConfig-version.cmake
+[3.695s] -- Installing: /home/kjh/robot_gui_pkg/install/robot_interfaces/share/robot_interfaces/package.xml
+[3.699s] Invoked command in '/home/kjh/robot_gui_pkg/build/robot_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kjh/robot_gui_pkg/install/ros2_gui:/opt/ros/humble /home/kjh/.local/bin/cmake --install /home/kjh/robot_gui_pkg/build/robot_interfaces

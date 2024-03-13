@@ -1,0 +1,13 @@
+{
+  "package_name": "ros2_interfaces",
+  "non_idl_tuples": [
+    "/home/kjh/robot_gui_pkg/src/ros2_interfaces:msg/BridgeBoolMultiArray.msg",
+    "/home/kjh/robot_gui_pkg/src/ros2_interfaces:msg/BridgeFloat32MultiArray.msg",
+    "/home/kjh/robot_gui_pkg/src/ros2_interfaces:msg/BridgeJointStateWithAccel.msg",
+    "/home/kjh/robot_gui_pkg/src/ros2_interfaces:msg/BridgeStringMultiArray.msg",
+    "/home/kjh/robot_gui_pkg/src/ros2_interfaces:msg/BridgeDt.msg",
+    "/home/kjh/robot_gui_pkg/src/ros2_interfaces:msg/BridgeCurrent.msg",
+    "/home/kjh/robot_gui_pkg/src/ros2_interfaces:msg/BridgeError.msg",
+    "/home/kjh/robot_gui_pkg/src/ros2_interfaces:msg/BridgeRobotStatus.msg"
+  ]
+}

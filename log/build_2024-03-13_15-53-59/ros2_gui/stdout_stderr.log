@@ -1,0 +1,22 @@
+running egg_info
+writing ../../build/ros2_gui/ros2_gui.egg-info/PKG-INFO
+writing dependency_links to ../../build/ros2_gui/ros2_gui.egg-info/dependency_links.txt
+writing entry points to ../../build/ros2_gui/ros2_gui.egg-info/entry_points.txt
+writing requirements to ../../build/ros2_gui/ros2_gui.egg-info/requires.txt
+writing top-level names to ../../build/ros2_gui/ros2_gui.egg-info/top_level.txt
+reading manifest file '../../build/ros2_gui/ros2_gui.egg-info/SOURCES.txt'
+writing manifest file '../../build/ros2_gui/ros2_gui.egg-info/SOURCES.txt'
+running build
+running build_py
+copying ros2_gui/__init__.py -> /home/kjh/robot_gui_pkg/build/ros2_gui/build/lib/ros2_gui
+running install
+running install_lib
+copying /home/kjh/robot_gui_pkg/build/ros2_gui/build/lib/ros2_gui/__init__.py -> /home/kjh/robot_gui_pkg/install/ros2_gui/lib/python3.10/site-packages/ros2_gui
+byte-compiling /home/kjh/robot_gui_pkg/install/ros2_gui/lib/python3.10/site-packages/ros2_gui/__init__.py to __init__.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/kjh/robot_gui_pkg/install/ros2_gui/lib/python3.10/site-packages/ros2_gui-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/ros2_gui/ros2_gui.egg-info to /home/kjh/robot_gui_pkg/install/ros2_gui/lib/python3.10/site-packages/ros2_gui-0.0.0-py3.10.egg-info
+running install_scripts
+Installing run_ui script to /home/kjh/robot_gui_pkg/install/ros2_gui/lib/ros2_gui
+writing list of installed files to '/home/kjh/robot_gui_pkg/build/ros2_gui/install.log'

@@ -1,0 +1,31 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from robot_interfaces/msg/BridgeCurrent.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module robot_interfaces {
+  module msg {
+    struct BridgeCurrent {
+      std_msgs::msg::Header header;
+
+      sequence<double> anchor_fix_current;
+
+      sequence<double> anchor_move_current;
+
+      sequence<double> ascender_motor_current;
+
+      sequence<double> wheelleg_joint_current;
+
+      sequence<double> wheelleg_turret_current;
+
+      sequence<double> wheelleg_wheel_current;
+
+      double anchor_current_sum;
+
+      double ascender_current_sum;
+
+      double wheelleg_current_sum;
+    };
+  };
+};

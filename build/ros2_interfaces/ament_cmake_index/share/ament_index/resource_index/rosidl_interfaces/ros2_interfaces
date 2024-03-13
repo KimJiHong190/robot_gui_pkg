@@ -1,0 +1,16 @@
+msg/BridgeBoolMultiArray.idl
+msg/BridgeBoolMultiArray.msg
+msg/BridgeCurrent.idl
+msg/BridgeCurrent.msg
+msg/BridgeDt.idl
+msg/BridgeDt.msg
+msg/BridgeError.idl
+msg/BridgeError.msg
+msg/BridgeFloat32MultiArray.idl
+msg/BridgeFloat32MultiArray.msg
+msg/BridgeJointStateWithAccel.idl
+msg/BridgeJointStateWithAccel.msg
+msg/BridgeRobotStatus.idl
+msg/BridgeRobotStatus.msg
+msg/BridgeStringMultiArray.idl
+msg/BridgeStringMultiArray.msg
