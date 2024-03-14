@@ -32,18 +32,17 @@ ros2 run ros2_gui run_ui
 ## Code Structure
 
 ```
-                                                     Test UI DESCRIPTION
+                     Test UI DESCRIPTION
                                                      
-        [CLASS]                [PAGE/FUNCTION]                                     [TOPIC NAME]                         
+   [CLASS]         [PAGE/FUNCTION]                              [TOPIC NAME]                         
 
                         
-                        
-                        
-        SetupWindow : Setup Page
-                        ㄴ Control Switch
-                            ㄴ on_robot1_activation_clicked             : /ui_setup_is_robot1_activation
-                            ㄴ on_stop_clicked                          : /ui_setup_is_robot_stop
-                            ㄴ on_break_clicked                         : /ui_setup_is_robot_break
+               
+SetupWindow : Setup Page
+                ㄴ Control Switch
+                  ㄴ on_robot1_activation_clicked           : /ui_setup_is_robot1_activation
+                  ㄴ on_stop_clicked                        : /ui_setup_is_robot_stop
+                  ㄴ on_break_clicked                       : /ui_setup_is_robot_break
                             
                         ㄴ Calibration
                             ㄴ on_total_calibration_clicked             : /ui_setup_is_total_calibration
