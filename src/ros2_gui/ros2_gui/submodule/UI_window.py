@@ -816,18 +816,18 @@ class MainWindow(QMainWindow):
     def create_main_control_switch_group(self):
         group = QGroupBox("Main Control Switch")
         layout = QGridLayout()
-        self.robot_activation_btn = self.create_toggle_button_false("Robot Activation")
+        self.robot1_activation_btn = self.create_toggle_button_false("Robot1 Activation")
         self.stop_btn = self.create_toggle_button_false("Stop")
         self.break_btn = self.create_toggle_button_false("Break")
-        self.robot4_activation_btn = self.create_toggle_button_false("robot4 Activation")
+        self.robot4_activation_btn = self.create_toggle_button_false("Robot4 Activation")
         self.total_calibration_btn = self.create_toggle_button_false_A("Total Calibration")
-        self.robot2_calibration_btn = self.create_toggle_button_false_A("robot2 Calibration")
+        self.robot2_calibration_btn = self.create_toggle_button_false_A("Robot2 Calibration")
         self.joint_calibration_btn = self.create_toggle_button_false_A("Joint Calibration")
         self.wheel_calibration_btn = self.create_toggle_button_false_A("Wheel Calibration")
         self.turret_calibration_btn = self.create_toggle_button_false_A("Turret Calibration")
-        self.robot4_calibration_btn = self.create_toggle_button_false_A("robot4 Calibration")
+        self.robot4_calibration_btn = self.create_toggle_button_false_A("Robot4 Calibration")
         
-        self.robot2_activation_btn = self.create_toggle_button_false("robot2 Activation")
+        self.robot2_activation_btn = self.create_toggle_button_false("Robot2 Activation")
         self.joint_activation_btn = self.create_toggle_button_false("Joint Activation")
         self.turret_activation_btn = self.create_toggle_button_false_A("Turret Activation")
         self.turret_dir_btn = self.create_toggle_button_false_A("Turret Dir")
@@ -852,7 +852,7 @@ class MainWindow(QMainWindow):
         climb_group.addButton(self.climbing)     
          
         
-        layout.addWidget(self.robot_activation_btn)
+        layout.addWidget(self.robot1_activation_btn)
         layout.addWidget(self.stop_btn)
         layout.addWidget(self.break_btn)
         

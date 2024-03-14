@@ -14,11 +14,13 @@ from ros2_interfaces.msg import BridgeStringMultiArray, BridgeBoolMultiArray, Br
                                                      
         [CLASS]                [PAGE/FUNCTION]                                     [TOPIC NAME]                         
 
-
+                        
+                        
+                        
         SetupWindow : Setup Page
                         ㄴ Control Switch
-                            ㄴ on_robot_activation_clicked              : /ui_setup_is_robot_activation
-                            ㄴ on_stop_clicked                          : /ui_setup_is_robot_mode
+                            ㄴ on_robot1_activation_clicked              : /ui_setup_is_robot1_activation
+                            ㄴ on_stop_clicked                          : /ui_setup_is_robot_stop
                             ㄴ on_break_clicked                         : /ui_setup_is_robot_break
                             
                         ㄴ Calibration
@@ -29,7 +31,7 @@ from ros2_interfaces.msg import BridgeStringMultiArray, BridgeBoolMultiArray, Br
                             ㄴ on_turret_calibration_clicked            : /ui_setup_is_turret_calibration
                             
                         ㄴ Motor speed_acc setting
-                            ㄴ on_anchor_motor_set_clicked              : /ui_setup_anchor_motor_setting
+                            ㄴ on_robot1_motor_set_clicked              : /ui_setup_robot1_motor_setting
                             ㄴ on_robot2_motor_set_clicked            : /ui_setup_robot2_motor_setting
                             ㄴ on_joint_motor_set_clicked               : /ui_setup_joint_motor_setting
                             
@@ -38,11 +40,10 @@ from ros2_interfaces.msg import BridgeStringMultiArray, BridgeBoolMultiArray, Br
                             ㄴ on_initial_pose_set_clicked              : /ui_setup_initial_pose
 
         ManualWindow : Manual Page
-                        ㄴ Anchor                                       
-                            ㄴ on_anchor_activation_clicked             : /ui_manual_is_anchor_activation
-                            ㄴ on_anchor_position_changed               : /ui_manual_is_anchor_position
-                            ㄴ on_anchor_fixed_changed                  : /ui_manual_is_anchor_fixed
-
+                        ㄴ robot1                                       
+                            ㄴ on_robot1_position_changed               : /ui_manual_is_robot1_position
+                            ㄴ on_anchor_fixed_changed                  : /ui_manual_is_anchor_fixed (not)
+ 
                         ㄴ robot2
                             ㄴ on_robot2_activation_clicked           : /ui_manual_is_robot2_activation
                             ㄴ on_robot2_each_changed                 : /ui_manual_is_robot2_each
@@ -102,7 +103,7 @@ class UIController(Node, MainWindow):
 
     def initialize_publishers(self):
         """Initializes ROS2 publishers."""
-        self.robot_activation_pub = self.create_publisher(BridgeBoolMultiArray, 'ui_setup_is_robot_activation', 10)
+        self.robot1_activation_pub = self.create_publisher(BridgeBoolMultiArray, 'ui_setup_is_robot1_activation', 10)
         self.robot_mode_pub = self.create_publisher(BridgeBoolMultiArray, 'ui_setup_is_robot_stop', 10)
         self.robot_break_pub = self.create_publisher(BridgeBoolMultiArray, 'ui_setup_is_robot_break', 10)
         self.total_calibration_pub = self.create_publisher(BridgeBoolMultiArray, 'ui_setup_is_total_calibration', 10)
@@ -110,7 +111,9 @@ class UIController(Node, MainWindow):
         self.joint_calibration_pub = self.create_publisher(BridgeBoolMultiArray, 'ui_setup_is_joint_calibration', 10)
         self.wheel_calibration_pub = self.create_publisher(BridgeBoolMultiArray, 'ui_setup_is_wheel_calibration', 10)
         self.turret_calibration_pub = self.create_publisher(BridgeBoolMultiArray, 'ui_setup_is_turret_calibration', 10)
-        self.anchor_motor_setting_pub = self.create_publisher(BridgeFloat32MultiArray, 'ui_setup_anchor_motor_setting', 10)
+        self.manual_robot2_activation_pub = self.create_publisher(BridgeBoolMultiArray, 'ui_manual_is_robot2_activation', 10)
+        
+        self.anchor_motor_setting_pub = self.create_publisher(BridgeFloat32MultiArray, 'ui_setup_robot1_motor_setting', 10)
         self.robot2_motor_setting_pub = self.create_publisher(BridgeFloat32MultiArray, 'ui_setup_robot2_motor_setting', 10)
         self.joint_motor_setting_pub = self.create_publisher(BridgeFloat32MultiArray, 'ui_setup_joint_motor_setting', 10)
         self.robot_land_stand_mode_pub = self.create_publisher(BridgeBoolMultiArray, 'ui_setup_robot_mode', 10)
@@ -123,11 +126,13 @@ class UIController(Node, MainWindow):
 
         self.setup_robot2_parameter_pub = self.create_publisher(BridgeFloat32MultiArray, 'ui_setup_robot2_parameter', 10)
         self.setup_robot2_filter_pub = self.create_publisher(BridgeFloat32MultiArray, 'ui_setup_robot2_filter', 10)
-
-        self.anchor_activation_pub = self.create_publisher(BridgeBoolMultiArray, 'ui_manual_is_anchor_activation', 10)
-        self.manual_anchor_position_pub = self.create_publisher(BridgeBoolMultiArray, 'ui_manual_is_anchor_position', 10)
-        self.manual_anchor_fixed_pub = self.create_publisher(BridgeBoolMultiArray, 'ui_manual_is_anchor_fixed', 10)
-        self.manual_robot2_activation_pub = self.create_publisher(BridgeBoolMultiArray, 'ui_manual_is_robot2_activation', 10)
+        
+        #not used
+        self.manual_robot1_fixed_pub = self.create_publisher(BridgeBoolMultiArray, 'ui_manual_is_robot1_fixed', 10)
+        
+        self.manual_robot1_position_pub = self.create_publisher(BridgeBoolMultiArray, 'ui_manual_is_robot1_position', 10)
+        
+        
         self.manual_robot2_each_pub = self.create_publisher(BridgeBoolMultiArray, 'ui_manual_is_robot2_each', 10)
         self.manual_robot2_remote_pub = self.create_publisher(BridgeBoolMultiArray, 'ui_manual_is_robot2_remote', 10)
         self.manual_robot2_remote_vel_pub = self.create_publisher(BridgeFloat32MultiArray, 'ui_manual_robot2_remote_velocity', 10)
@@ -150,7 +155,7 @@ class UIController(Node, MainWindow):
         
     def setup_signal_connections(self):
         """Connects GUI elements to their respective methods."""
-        self.robot_activation_btn.clicked.connect(self.on_robot_activation_clicked)
+        self.robot1_activation_btn.clicked.connect(self.on_robot1_activation_clicked)
         self.stop_btn.clicked.connect(self.on_stop_clicked)
         self.break_btn.clicked.connect(self.on_break_clicked)
         self.total_calibration_btn.clicked.connect(self.on_total_calibration_clicked)
@@ -168,7 +173,7 @@ class UIController(Node, MainWindow):
         
         #####
         
-        self.page1.robot1_set_btn.clicked.connect(self.on_anchor_motor_set_clicked)
+        self.page1.robot1_set_btn.clicked.connect(self.on_robot1_motor_set_clicked)
         self.page1.robot2_set_btn.clicked.connect(self.on_robot2_motor_set_clicked)
         self.page1.robot3_set_btn.clicked.connect(self.on_joint_motor_set_clicked)
         self.page1.page1_setting2_set_btn.clicked.connect(self.on_motor_read_current_filter_LPF_set_clicked)
@@ -184,10 +189,10 @@ class UIController(Node, MainWindow):
 
         #####
 
-        self.page2.robot1_position_left_arrow.clicked.connect(self.on_anchor_position_changed)
-        self.page2.robot1_position_right_arrow.clicked.connect(self.on_anchor_position_changed)
-        self.page2.robot4_position_left_arrow.clicked.connect(self.on_anchor_position_changed)
-        self.page2.robot4_position_right_arrow.clicked.connect(self.on_anchor_position_changed)
+        self.page2.robot1_position_left_arrow.clicked.connect(self.on_robot1_position_changed)
+        self.page2.robot1_position_right_arrow.clicked.connect(self.on_robot1_position_changed)
+        self.page2.robot4_position_left_arrow.clicked.connect(self.on_robot1_position_changed)
+        self.page2.robot4_position_right_arrow.clicked.connect(self.on_robot1_position_changed)
         self.page2.robot2_left_motor_up_arrow.clicked.connect(self.on_robot2_each_changed)
         self.page2.robot2_left_motor_down_arrow.clicked.connect(self.on_robot2_each_changed)
         self.page2.robot2_right_motor_up_arrow.clicked.connect(self.on_robot2_each_changed)
@@ -233,13 +238,13 @@ class UIController(Node, MainWindow):
         
 
 
-    def on_robot_activation_clicked(self):
+    def on_robot1_activation_clicked(self):
         """Handles Robot Activation Button click."""
         msg = BridgeBoolMultiArray()
         msg.header.stamp = self.get_clock().now().to_msg()
-        msg.name = ['is_robot_activation']
-        msg.bool_values = [self.robot_activation_btn.isChecked()]
-        self.robot_activation_pub.publish(msg)
+        msg.name = ['is_robot1_activation']
+        msg.bool_values = [self.robot1_activation_btn.isChecked()]
+        self.robot1_activation_pub.publish(msg)
 
     def on_stop_clicked(self):
         msg = BridgeBoolMultiArray()
@@ -290,7 +295,7 @@ class UIController(Node, MainWindow):
         msg.bool_values = [self.turret_calibration_btn.isChecked()]
         self.turret_calibration_pub.publish(msg)
 
-    def on_anchor_motor_set_clicked(self):
+    def on_robot1_motor_set_clicked(self):
         msg = BridgeFloat32MultiArray()
         msg.header.stamp = self.get_clock().now().to_msg()
         msg.name = ['speed', 'acc']
@@ -372,8 +377,8 @@ class UIController(Node, MainWindow):
         ###
         
         
-    def on_anchor_position_changed(self):
-        if not hasattr(self, "anchor_position_states"):
+    def on_robot1_position_changed(self):
+        if not hasattr(self, "robot1_position_states"):
             self.anchor_position_states = [False, False, False, False]
 
         msg = BridgeBoolMultiArray()
@@ -392,7 +397,7 @@ class UIController(Node, MainWindow):
             self.anchor_position_states[3] = not self.anchor_position_states[3]
 
         msg.bool_values = self.anchor_position_states
-        self.manual_anchor_position_pub.publish(msg)  
+        self.manual_robot1_position_pub.publish(msg)  
         
 
         
@@ -699,11 +704,11 @@ class UIController(Node, MainWindow):
             pass
 
     def publish_default_states_false(self):
-        self.on_robot_activation_clicked()
+        self.on_robot1_activation_clicked()
         self.on_stop_clicked()
         self.on_break_clicked()
         self.on_total_calibration_clicked()
-        self.on_anchor_position_changed()
+        self.on_robot1_position_changed()
         self.on_robot2_calibration_clicked()
         self.on_joint_calibration_clicked()
         self.on_wheel_calibration_clicked()
