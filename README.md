@@ -14,7 +14,13 @@ Please note that this repository doesn't delve into each function within the UI,
 To install and set up your environment to use this GUI, follow these steps:
 
 ```bash
-# Insert your terminal commands here
-# Example:
 cd robot_gui_pkg
-# etc.
+
+'''bash
+colcon build
+
+'''bash
+source instll/setup.bash
+
+'''bash
+ros2 run ros2_gui run_ui
