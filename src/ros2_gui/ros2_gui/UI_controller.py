@@ -19,20 +19,20 @@ from ros2_interfaces.msg import BridgeStringMultiArray, BridgeBoolMultiArray, Br
                         
         SetupWindow : Setup Page
                         ㄴ Control Switch
-                            ㄴ on_robot1_activation_clicked              : /ui_setup_is_robot1_activation
+                            ㄴ on_robot1_activation_clicked             : /ui_setup_is_robot1_activation
                             ㄴ on_stop_clicked                          : /ui_setup_is_robot_stop
                             ㄴ on_break_clicked                         : /ui_setup_is_robot_break
                             
                         ㄴ Calibration
                             ㄴ on_total_calibration_clicked             : /ui_setup_is_total_calibration
-                            ㄴ on_robot2_calibration_clicked          : /ui_setup_is_robot2_calibration
+                            ㄴ on_robot2_calibration_clicked            : /ui_setup_is_robot2_calibration
                             ㄴ on_joint_calibration_clicked             : /ui_setup_is_joint_calibration
                             ㄴ on_wheel_calibration_clicked             : /ui_setup_is_wheel_calibration
                             ㄴ on_turret_calibration_clicked            : /ui_setup_is_turret_calibration
                             
                         ㄴ Motor speed_acc setting
                             ㄴ on_robot1_motor_set_clicked              : /ui_setup_robot1_motor_setting
-                            ㄴ on_robot2_motor_set_clicked            : /ui_setup_robot2_motor_setting
+                            ㄴ on_robot2_motor_set_clicked              : /ui_setup_robot2_motor_setting
                             ㄴ on_joint_motor_set_clicked               : /ui_setup_joint_motor_setting
                             
                         ㄴ Initial Pose
@@ -45,10 +45,10 @@ from ros2_interfaces.msg import BridgeStringMultiArray, BridgeBoolMultiArray, Br
                             ㄴ on_anchor_fixed_changed                  : /ui_manual_is_anchor_fixed (not)
  
                         ㄴ robot2
-                            ㄴ on_robot2_activation_clicked           : /ui_manual_is_robot2_activation
-                            ㄴ on_robot2_each_changed                 : /ui_manual_is_robot2_each
-                            ㄴ on_robot2_remote_changed               : /ui_manual_is_robot2_remote
-                            ㄴ on_robot2_remote_vel_clicked           : /ui_manual_robot2_remote_velocity
+                            ㄴ on_robot2_activation_clicked             : /ui_manual_is_robot2_activation
+                            ㄴ on_robot2_each_changed                   : /ui_manual_is_robot2_each
+                            ㄴ on_robot2_remote_changed                 : /ui_manual_is_robot2_remote
+                            ㄴ on_robot2_remote_vel_clicked             : /ui_manual_robot2_remote_velocity
                             
                         ㄴ Activation Setting
                             ㄴ on_activation_setting_changed            
