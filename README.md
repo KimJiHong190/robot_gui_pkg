@@ -18,7 +18,7 @@ cd robot_gui_pkg
 ```
 
 ```bash
-colcon build
+colcon build --symlink-install
 ```
 
 ```bash
