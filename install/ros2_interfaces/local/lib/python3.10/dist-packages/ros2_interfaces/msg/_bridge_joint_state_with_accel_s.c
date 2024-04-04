@@ -1,1 +1,0 @@
-/home/kjh/robot_gui_pkg/build/ros2_interfaces/rosidl_generator_py/ros2_interfaces/msg/_bridge_joint_state_with_accel_s.c

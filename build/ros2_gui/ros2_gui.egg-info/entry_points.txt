@@ -1,3 +1,0 @@
-[console_scripts]
-run_ui = ros2_gui.UI_controller:main
-

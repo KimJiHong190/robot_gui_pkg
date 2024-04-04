@@ -1,1 +1,0 @@
-/home/kjh/robot_gui_pkg/build/ros2_interfaces/rosidl_generator_c/ros2_interfaces/msg/rosidl_generator_c__visibility_control.h

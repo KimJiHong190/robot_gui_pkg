@@ -1,8 +1,0 @@
-/home/kjh/robot_gui_pkg/build/ros2_interfaces/rosidl_adapter/ros2_interfaces:msg/BridgeBoolMultiArray.idl
-/home/kjh/robot_gui_pkg/build/ros2_interfaces/rosidl_adapter/ros2_interfaces:msg/BridgeFloat32MultiArray.idl
-/home/kjh/robot_gui_pkg/build/ros2_interfaces/rosidl_adapter/ros2_interfaces:msg/BridgeJointStateWithAccel.idl
-/home/kjh/robot_gui_pkg/build/ros2_interfaces/rosidl_adapter/ros2_interfaces:msg/BridgeStringMultiArray.idl
-/home/kjh/robot_gui_pkg/build/ros2_interfaces/rosidl_adapter/ros2_interfaces:msg/BridgeDt.idl
-/home/kjh/robot_gui_pkg/build/ros2_interfaces/rosidl_adapter/ros2_interfaces:msg/BridgeCurrent.idl
-/home/kjh/robot_gui_pkg/build/ros2_interfaces/rosidl_adapter/ros2_interfaces:msg/BridgeError.idl
-/home/kjh/robot_gui_pkg/build/ros2_interfaces/rosidl_adapter/ros2_interfaces:msg/BridgeRobotStatus.idl
