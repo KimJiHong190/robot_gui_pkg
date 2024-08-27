@@ -1,5 +1,9 @@
 # Robot Control GUI
 
+
+The new GUI has been updated here. https://github.com/KimJiHong190/ros2_controller_gui
+
+
 ## Overview
 
 This GUI is a simplified version of the interface used to test our ROS2-based robots. It facilitates easy setup for complex robots as well as conducting simple experiments. The GUI is designed to publish specific topics that your robot's control code can interpret to perform various manipulations. 
